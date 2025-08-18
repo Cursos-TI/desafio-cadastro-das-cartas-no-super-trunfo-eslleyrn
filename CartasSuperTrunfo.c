@@ -64,10 +64,6 @@ int main() {
     printf("Digite o número de pontos turisticos:\n");
     scanf("%d", &pontos_turisticos);
 
-    densidade_pupulacional = (float) populacao/area;
-    pib_per_capital = (float) pib/populacao;
-
-
     printf("É a vez do jogador 2\n");
 
     printf("Digite o nome do estado:\n");
@@ -90,6 +86,9 @@ int main() {
 
     printf("Digite o número de pontos turisticos:\n");
     scanf("%d", &pontos_turisticosd);
+
+    densidade_pupulacional = (float) populacao/area;
+    pib_per_capital = (float) pib/populacao;
 
     densidade_pupulacional2 = (float) populacao2/area2;
     pib_per_capital2 = (float) pib2/populacao2;
