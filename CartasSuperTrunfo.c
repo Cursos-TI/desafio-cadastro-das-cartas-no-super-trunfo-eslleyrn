@@ -13,18 +13,24 @@ int main() {
     char estado[25]; 
     char codigo_carta[25];
     char nome_cidade[25];
-    float população;
+    int populacao;
     float area;
     float pib;
     int pontos_turisticos;
+    float densidade_pupulacional;
+    float pib_per_capital;
+
 
     char estado2[25];
     char codigo_carta2[25];
     char nome_cidade2[25];
-    float população2;
+    int populacao2;
     float area2; 
     float pib2;
     int pontos_turisticosd;
+    float densidade_pupulacional2;
+    float pib_per_capital2;
+
 
     // Cadastro das Cartas:
     // Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
@@ -32,7 +38,7 @@ int main() {
     
     printf("========================\n");
     printf("OPÇÕES DE CARTAS:\n");
-    printf("FORTALEZA CARTA(A01)\n");
+    printf("CEARA CARTA(A01)\n");
     printf("PERNAMBUCO CARTA(B02)\n");
     printf("========================\n");
 
@@ -40,14 +46,14 @@ int main() {
     printf("Digite o nome do estado:\n");
     scanf("%s", estado);
 
-    printf("Digite o código da carta(ex: A01, B03):\n");
+    printf("Digite o código da carta(ex: A01, B02):\n");
     scanf("%s", codigo_carta);
 
     printf("Digite o nome da cidade:\n");
     scanf("%s", nome_cidade);
 
-    printf("Digite a populção de habitantes:\n");
-    scanf("%d", &população);
+    printf("Digite a população:\n");
+    scanf("%d", &populacao);
 
     printf("Digite a área:\n");
     scanf("%f", &area);
@@ -58,7 +64,8 @@ int main() {
     printf("Digite o número de pontos turisticos:\n");
     scanf("%d", &pontos_turisticos);
 
-
+    densidade_pupulacional = (float) populacao/area;
+    pib_per_capital = (float) pib/populacao;
 
 
     printf("É a vez do jogador 2\n");
@@ -66,14 +73,14 @@ int main() {
     printf("Digite o nome do estado:\n");
     scanf("%s", estado2);
 
-    printf("Digite o código da carta(ex: A01, B02, C03):\n");
+    printf("Digite o código da carta(ex: A01, B02):\n");
     scanf("%s", codigo_carta2);
 
     printf("Digite o nome da cidade:\n");
     scanf("%s", nome_cidade2);
 
     printf("Digite a populção:\n");
-    scanf("%d", &população2);
+    scanf("%d", &populacao2);
 
     printf("Digite a área:\n");
     scanf("%f", &area2);
@@ -84,6 +91,9 @@ int main() {
     printf("Digite o número de pontos turisticos:\n");
     scanf("%d", &pontos_turisticosd);
 
+    densidade_pupulacional2 = (float) populacao2/area2;
+    pib_per_capital2 = (float) pib2/populacao2;
+
     // Exibição dos Dados das Cartas:
     // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
     // Exiba os valores inseridos para cada atributo da cidade, um por linha.
@@ -92,10 +102,12 @@ int main() {
     printf("Estado: %s \n", estado);
     printf("Código da carta: %s \n", codigo_carta);
     printf("Nome da cidade: %s \n", nome_cidade);
-    printf("Populção: %d habitantes \n", população );
-    printf("Área(km²): %f km² \n", area);
-    printf("PIB: R$ %f \n", pib);
+    printf("Populção: %d habitantes \n", populacao);
+    printf("Área(km²): %.1f km² \n", area);
+    printf("PIB: R$ %.2f bilhões \n", pib);
     printf("Número de pontos turisticos: %d \n", pontos_turisticos);
+    printf("Densidade populacional: %.2f hab/km² \n", densidade_pupulacional);
+    printf("PIB per capital: R$ %.2f \n", pib_per_capital);
     printf("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\n");
 
     printf("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\n");
@@ -103,10 +115,12 @@ int main() {
     printf("Estado: %s \n", estado2);
     printf("Código da carta: %s \n", codigo_carta2);
     printf("Nome da cidade: %s \n", nome_cidade2);
-    printf("Populção: %d habitantes \n", população2);
-    printf("Área(km²): %f km² \n", area2);
-    printf("PIB: R$ %f  \n", pib);
+    printf("Populção: %d habitantes \n", populacao2);
+    printf("Área(km²): %.1f km² \n", area2);
+    printf("PIB: R$ %.2f bilhões \n", pib2);
     printf("Número de pontos turisticos: %d \n", pontos_turisticosd);
+    printf("Densidade populacional: %.2f hab/km² \n", densidade_pupulacional2);
+    printf("PIB per capital: R$ %.2f \n", pib_per_capital2);
     printf("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\n");
 
     return 0;
