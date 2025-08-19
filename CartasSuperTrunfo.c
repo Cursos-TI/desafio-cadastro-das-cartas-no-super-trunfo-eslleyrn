@@ -18,7 +18,7 @@ int main() {
     float pib;
     int pontos_turisticos;
     float densidade_pupulacional;
-    float pib_per_capital;
+    float pib_per_capita;
 
 
     char estado2[25];
@@ -29,7 +29,7 @@ int main() {
     float pib2;
     int pontos_turisticosd;
     float densidade_pupulacional2;
-    float pib_per_capital2;
+    float pib_per_capita2;
 
 
     // Cadastro das Cartas:
@@ -87,11 +87,11 @@ int main() {
     printf("Digite o número de pontos turisticos:\n");
     scanf("%d", &pontos_turisticosd);
 
-    densidade_pupulacional = (float) populacao/area;
-    pib_per_capital = (float) pib/populacao;
+    densidade_pupulacional = (float) populacao / area;
+    pib_per_capita = (float) (pib * 1000000000) / populacao;
 
-    densidade_pupulacional2 = (float) populacao2/area2;
-    pib_per_capital2 = (float) pib2/populacao2;
+    densidade_pupulacional2 = (float) populacao2 / area2;
+    pib_per_capita2 = (float) (pib2 * 1000000000) / populacao2;
 
     // Exibição dos Dados das Cartas:
     // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
@@ -106,7 +106,7 @@ int main() {
     printf("PIB: R$ %.2f bilhões \n", pib);
     printf("Número de pontos turisticos: %d \n", pontos_turisticos);
     printf("Densidade populacional: %.2f hab/km² \n", densidade_pupulacional);
-    printf("PIB per capital: R$ %.2f \n", pib_per_capital);
+    printf("PIB per capital: R$ %.2f \n", pib_per_capita);
     printf("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\n");
 
     printf("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\n");
@@ -119,7 +119,7 @@ int main() {
     printf("PIB: R$ %.2f bilhões \n", pib2);
     printf("Número de pontos turisticos: %d \n", pontos_turisticosd);
     printf("Densidade populacional: %.2f hab/km² \n", densidade_pupulacional2);
-    printf("PIB per capital: R$ %.2f \n", pib_per_capital2);
+    printf("PIB per capital: R$ %.2f \n", pib_per_capita2);
     printf("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\n");
 
     return 0;
